@@ -1,0 +1,67 @@
+<html>
+<body>
+  
+
+<script language="javascript">
+
+var umaData, ano, mes, d, corfnt, corfdo, data;
+
+document.writeln("<table border='1'>");
+  document.writeln("<tr><td>DOM</td><td>SEG</td><td>TER</td><td>QUA</td><td>QUI</td><td>SEX</td><td>SAB</td></tr>")
+
+ano = parseInt(window.prompt("Qual ano?"));
+mes = parseInt(window.prompt("Qual mes?"));
+
+umaData = new Date();
+umaData.setDate(1);
+umaData.setMonth(mes - 1);
+umaData.setFullYear(ano);
+document.write("<h1>");
+switch (mes)
+   {
+     case 1: document.writeln("Janeiro"); break;
+     case 2: document.writeln("Fevereiro");break;
+     case 3: document.writeln("Março");break;
+     case 4: document.writeln("Abril");break;
+     case 5: document.writeln("Maio");break;
+     case 6: document.writeln("Junho");break;
+     case 7: document.writeln("Julho");break;
+     case 8: document.writeln("Agosto");break;
+     case 9: document.writeln("Setembro");break;
+     case 10: document.writeln("Outubro");break;
+     case 11: document.writeln("Novembro");break;
+     case 12: document.writeln("Dezembro");break;
+   }
+document.write(" de " + ano + "</h1>");
+document.write("<br>");
+
+
+
+for(d=1; d<=31; ++d)
+{
+
+   
+
+  
+    
+   switch (umaData.getDay())
+   {
+     case 0: document.write("<td>"+ d +"</td>"); break;
+     case 1: document.write("<td>"+ d +"</td>"); break;
+     case 2: document.write("<td>"+ d +"</td>"); break;
+     case 3: document.write("<td>"+ d +"</td>"); break;
+     case 4: document.write("<td>"+ d +"</td>"); break;
+     case 5: document.write("<td>"+ d +"</td>"); break;
+     case 6: document.write("</tr><tr><td>"+ d +"</td> </style>"); 
+             break;
+   }
+
+   umaData.setDate(d);
+}
+document.write("</table>");
+</script>
+
+</table>
+</body>
+
+</html>
